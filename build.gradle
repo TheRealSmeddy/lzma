@@ -1,0 +1,29 @@
+plugins {
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.1.1' // Apply the Shadow plugin
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.tukaani:xz:1.9'
+}
+
+application {
+    mainClass.set('LzmaCoder')
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'LzmaCoder'
+    }
+}
+
+// ShadowJar task to create the fat JAR
+shadowJar {
+    archiveBaseName.set('lzma')
+    archiveClassifier.set('')
+    archiveVersion.set('')
+}
