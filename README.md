@@ -46,3 +46,9 @@ To build the project, ensure you have Gradle installed and run:
 ./gradlew shadowJar
 ```
 This will generate a fat JAR file named lzma.jar in the build/libs directory.
+
+## Licensing
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+## Acknowledgments
+This project uses Tukaani's XZ library for compression and decompression. For more information on the licensing of the XZ library, please visit [Tukaani XZ Licensing](https://tukaani.org/xz/#_licensing).
